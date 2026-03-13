@@ -24,7 +24,7 @@ class UploadController extends Controller
             'pdf' => ['required', 'mimes:pdf', 'max:5120'],
         ]);
 
-        $path = $request->file('pdf')->store('private/documents', 'local');
+        $path = $request->file('pdf')->store('documents');
 
         return back()->with('success', 'PDF uploadé : ' . $path);
     }

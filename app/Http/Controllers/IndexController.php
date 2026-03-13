@@ -13,7 +13,7 @@ class IndexController extends Controller
 
     public function getPrivateDocument(string $filename)
     {
-        $path = 'private/documents/' . $filename;
+        $path = 'documents/' . $filename;
 
         if (! Storage::exists($path)) {
             abort(404);
